@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Fill Light</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="online desktop fill light">
+        <meta name="description" content="online desktop fill light">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            html, body {
+                margin: 0;
+                height: 100%;
+                background-color: #000;
+                font-family: sans-serif;
+            }
+            #Light {
+                width: 100%;
+                height: 100%;
+                transition: background-color 0.1s ease;
+            }
+            #Controls {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 0;
+                margin-bottom: 2rem;
+                padding: 0.75rem 1rem;
+                border-radius: 1rem;
+                background-color: #eee;
+            }
+            #Controls span, #Controls input {
+                margin: 0 0.5rem;
+            }
+            #Controls button {
+                border-radius: 50%;
+                width: 3rem;
+                height: 3rem;
+                border: 1px #ccc solid;
+                background-color: #eee;
+                font-size: 2rem;
+                padding-top: 0.25rem;
+            }
+            #Controls button:hover {
+                background-color: #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="Light"></div>
+        <div id="Controls">
+            <span>Brightness</span>
+            <input id="Brightness" type="range" min="30" max="100" value="80" oninput="updateColor()" />
+            <button onclick="toggleLight()">&#128161;</button>
+            <input id="Temperature" type="range" min="50" max="100" value="75" oninput="updateColor()" />
+            <span>Temperature</span>
+        </div>
+        <script>
+            let hue = 60;
+            let sat = 100;
+            let isOn = true;
+
+            function updateColor() {
+                const alpha = document.getElementById('Brightness').value
+                const lum = document.getElementById('Temperature').value
+
+                document.getElementById('Light').style.backgroundColor = isOn ? `hsl(${hue}, ${sat}%, ${lum}%, ${alpha}%)` : 'black';
+            }
+
+            function toggleLight() {
+                isOn = !isOn
+                updateColor()
+            }
+
+            updateColor()
+        </script>
+    </body>
+</html>
