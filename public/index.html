@@ -6,50 +6,60 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
             * {
-                -moz-box-sizing: border-box;
-                -webkit-box-sizing: border-box;
                 box-sizing: border-box;
                 padding: 0;
                 margin: 0;
                 font-family: sans-serif;
+                font-size: 18px;
                 color: #fbf1c7;
                 font-weight: 300;
             }
-            html,body,#MainContainer{
+            html, body, #MainContainer {
                 width: 100%;
                 height: 100%;
                 background-color: #282828;
             }
-            #MainContainer{
+            #MainContainer {
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
                 padding-left: 15%;
             }
-            section{
+            section {
                 padding: .7rem 0;
             }
-            h2{
+            h2 {
                 color: #8ec07c;
-                font-size: 1em;
+                font-size: 1.25rem;
                 font-weight: 100;
+                padding: 0.75rem 0 0.5rem;
             }
-            a{
-                font-size: .8em;
+            a {
+                font-size: 1rem;
+                line-height: 1.25rem;
+                text-decoration: none;
+                margin-right: 0.5rem;
+            }
+            a.broken {
+                color: #cc241d;
+            }
+            a:hover {
+                text-decoration: underline;
             }
         </style>
     </head>
     <body>
         <div id="MainContainer">
             <div id="FloatingBox">
-                <h1>BeyondBox</h1>
                 <div class="lists">
                     <section>
                         <h2>Projects</h2>
                         <a href="/planning">Planning Poker</a>
-                        <a href="http://kodenym.com">Codenames</a>
-                        <a href="/homepage">Homepage</a>
-                        <br />
+                        <a href="http://kodenym.com">Kodenym (Codenames online)</a>
+                        <a href="/homepage" class="broken">Homepage</a>
+                    </section>
+                    <section>
+                        <h2>Games</h2>
                         <a href="/games/brick/">Brick</a>
                         <a href="/games/platformer/">Platformer</a>
                         <a href="/games/balls/">Balls</a>
@@ -57,10 +67,12 @@
                     </section>
                     <section>
                         <h2>Configurations</h2>
-                        <a href="https://www.github.com/mikeymaxdb/configuration">Dots</a>
-                        <a href="https://www.github.com/mikeymaxdb/QMK/tree/master/keyboards/planck/keymaps/mikeymaxdb">Planck</a>
-                        <a href="https://www.github.com/mikeymaxdb/QMK/tree/master/keyboards/lets_split/keymaps/custom">Let's split</a>
+                        <a href="https://github.com/mikeymaxdb/configuration">Dots</a>
+                        <a href="https://github.com/mikeymaxdb/QMK/blob/master/keyboards/crkbd/keymaps/mikeymaxdb/keymap.c">Keyboard (Corne)</a>
                     </section>
+                    <section>
+                        <h2>Tools</h2>
+                        <a href="/fillLight">Fill Light</a>
                     <section>
                         <h2>Contact</h2>
                         <a href="https://www.github.com/mikeymaxdb/">GitHub</a>
