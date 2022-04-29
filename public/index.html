@@ -4,81 +4,59 @@
         <title>BeyondBox.net</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            * {
-                box-sizing: border-box;
-                padding: 0;
-                margin: 0;
-                font-family: sans-serif;
-                font-size: 18px;
-                color: #fbf1c7;
-                font-weight: 300;
-            }
-            html, body, #MainContainer {
-                width: 100%;
-                height: 100%;
-                background-color: #282828;
-            }
-            #MainContainer {
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                padding-left: 15%;
-            }
-            section {
-                padding: .7rem 0;
-            }
-            h2 {
-                color: #8ec07c;
-                font-size: 1.25rem;
-                font-weight: 100;
-                padding: 0.75rem 0 0.5rem;
-            }
-            a {
-                font-size: 1rem;
-                line-height: 1.25rem;
-                text-decoration: none;
-                margin-right: 0.5rem;
-            }
-            a.broken {
-                color: #cc241d;
-            }
-            a:hover {
-                text-decoration: underline;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div id="MainContainer">
-            <div id="FloatingBox">
-                <div class="lists">
-                    <section>
-                        <h2>Projects</h2>
-                        <a href="/planning">Planning Poker</a>
-                        <a href="http://kodenym.com">Kodenym (Codenames online)</a>
-                        <a href="/homepage" class="broken">Homepage</a>
-                    </section>
-                    <section>
-                        <h2>Games</h2>
-                        <a href="/games/brick/">Brick</a>
-                        <a href="/games/platformer/">Platformer</a>
-                        <a href="/games/balls/">Balls</a>
-                        <a href="/screaming">S</a>
-                    </section>
-                    <section>
-                        <h2>Configurations</h2>
-                        <a href="https://github.com/mikeymaxdb/configuration">Dots</a>
-                        <a href="https://github.com/mikeymaxdb/QMK/blob/master/keyboards/crkbd/keymaps/mikeymaxdb/keymap.c">Keyboard (Corne)</a>
-                    </section>
-                    <section>
-                        <h2>Tools</h2>
-                        <a href="/tools/fillLight">Fill Light</a>
-                    <section>
-                        <h2>Contact</h2>
-                        <a href="https://www.github.com/mikeymaxdb/">GitHub</a>
-                    </section>
-                </div>
+        <div class="wrapper">
+            <div class="content">
+                <section>
+                    <h2>Current Projects</h2>
+                    <a>[Secret Game Dev Project]</a>
+                    <p>Working on a custom game engine in Typescript and Three.js.</p>
+                    <a href="http://kodenym.com">Kodenym</a>
+                    <p>Play Codenames online with private games, custom dictionaries, and online multiplayer.</p>
+                </section>
+                <section>
+                    <h2>Setup</h2>
+                    <a href="https://github.com/mikeymaxdb/configuration">Dots</a>
+                    <p>Personal dotfiles, configs, scripts, keybindings, and more. Currently using Void Linux, AwesomeWM, NeoVim, Gruvbox.</p>
+                    <a href="https://github.com/mikeymaxdb/QMK/blob/master/keyboards/crkbd/keymaps/mikeymaxdb/keymap.c">Keyboard</a>
+                    <p>Current keyboard keymap. Corne PCBs kit, zilent v2 42g switches, DSA PBT caps, Colemak layout.</p>
+                </section>
+                <section>
+                    <h2>Tools</h2>
+                    <a href="/tools/fillLight">Fill Light</a>
+                    <p>A simple fill light to use during video calls. Adjust brightness and temperature. Needs more accurate color temperatures, but it gets the job done.</p>
+                </section>
+                <section>
+                    <h2>Open Source + Contact</h2>
+                    <a href="https://www.github.com/mikeymaxdb/">GitHub</a>
+                    <p>My GitHub. Not everything I work on, but most of the software.</p>
+                </section>
+                <section>
+                    <h2>Old Games</h2>
+                    <a href="/games/platformer/">Platformer</a>
+                    <p>A basic HTML5 platformer. Learning canvas rendering a long time ago. Save the princess!</p>
+                    <a href="/games/brick/">Brick Breaker</a>
+                    <p>A chaotic brick breaker game with power ups/mods. Gets out of control (and laggy) very quickly! (Also from a long time ago).</p>
+                    <a href="/games/balls/">Balls</a>
+                    <p>An HTML5 + Box2D clone of an at-the-time popular Android game. A fun take on brick breaker games. Unfinished.</p>
+                    <a href="/screaming">Screaming Robot</a>
+                    <p>This robot screams. (A combo of references from back in the day).</p>
+                </section>
+                <section>
+                    <h2>Old Projects</h2>
+                    <a href="/planning">Planning Poker</a>
+                    <p>A planning poker application for agile sprint planning.</p>
+                    <a href="/homepage" class="broken">Web Comics</a>
+                    <p>A webcomic agregator (currently not working).</p>
+                </section>
+            </div>
+            <div class="flair">
+                <canvas id="FlairCanvas" width=1000 height=1000></canvas>
             </div>
         </div>
+        <script src="three.min.js"></script>
+        <script src="flair.js"></script>
     </body>
 </html>
