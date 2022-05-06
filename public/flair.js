@@ -13,7 +13,7 @@ if (window.innerWidth >= 16 * 50) {
     camera.position.z = 40
     scene.add(mesh)
 
-    function tick() {
+    const tick = () => {
         const delta = clock.getDelta()
 
         renderer.render(scene, camera)
