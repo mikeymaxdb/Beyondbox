@@ -48,7 +48,7 @@
     padding: 0;
     margin: 0;
     font-family: dejavu, arial, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--foreground);
     font-weight: 300;
 }
@@ -60,7 +60,7 @@ body {
 .wrapper {
     display: flex;
     width: 85%;
-    max-width: 85rem;
+    max-width: 90rem;
     margin: auto;
     padding-top: 4rem;
 }
@@ -94,7 +94,7 @@ h2 {
     border-bottom: 1px solid var(--border);
 }
 
-a {
+h2 ~ a {
     font-size: 1rem;
     line-height: 1.25rem;
     margin-right: 0.5rem;
@@ -103,7 +103,6 @@ a {
 
 p {
     padding: 0.25rem 0 1rem;
-    font-size: 0.8rem;
 }
 
 canvas {
